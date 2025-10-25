@@ -48,7 +48,6 @@ The following software is required:
 * Python (>3) and some common packages (numpy, pandas, opencv2, ...)
 
 # Installation
-* Download the [Zenodo packages](https://doi.org/10.5281/zenodo.6966437) and extract them.
 * Install Mathworks Matlab and the Computer Vision Toolbox. 
 * Install Python (>3) and the required packages (common data science packages such as numpy, pandas, opencv2, ...). 
 * Open Matlab and use command `matlabroot` within Matlab command window to retrieve the Matlab installation path.

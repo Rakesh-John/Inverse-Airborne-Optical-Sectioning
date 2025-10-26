@@ -66,7 +66,7 @@ Simply open folder `Paper_Results` within `IAOS_Code` folder and execute the pyt
 
 ## Citation
 
-
+If you use this dataset or code, please cite:
 ```bibtex
 @article{amala2022inverse,
   title={Inverse airborne optical sectioning},

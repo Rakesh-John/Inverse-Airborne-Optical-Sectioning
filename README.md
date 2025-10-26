@@ -6,22 +6,22 @@ In this article we present Inverse Airborne Optical Sectioning (IAOS) – an opt
 
 **Authors:** **Rakesh John Amala Arokia Nathan**, Indrajit Kurmi and Oliver Bimber
 
-The package contains the following zip files: `IAOS_Code`, `IAOS_Data`. 
+The package contains the following folders: `IAOS_Code`, `IAOS_Data`. 
 This data is required to reproduce the results explained in the [Demo](#Demo) section (e.g., to compute figures 3,4,5 and supplementary videos 1,2,3).
 
 Further details can be found in the main article and supplementary material of our publication: [Drones](https://www.mdpi.com/2504-446X/6/9/231#app1-drones-06-00231).
 
 
 ## General Structure
-We provide 2 main packages (`IAOS_Code.zip` and `IAOS_Data.zip`), which correspond to code and data utilized in our main article.
+We provide 2 main packages (`IAOS_Code` and `IAOS_Data`), which correspond to code and data utilized in our main article.
 
 
-## IAOS_Code.zip
-The zip packages contains the code to compute figures 3,4,5 and supplementary videos 1,2,3 of our article. Additionally we publish code to perform Automatic and Manual Motion Parameters Estimation for performing IAOS.
+## IAOS_Code
+The folder contains the code to compute figures 3,4,5 and supplementary videos 1,2,3 of our article. Additionally we publish code to perform Automatic and Manual Motion Parameters Estimation for performing IAOS.
 
 Folder `Paper_Results` contains two python scripts. 
 
-The First script `IAOS_Manual_Parameter_Estimation.py` generates results for Figure 3 and 4, specifically Figure 3k, 3l by utilizing rectified images provided in folder `Figure3k` within `IAOS_Data.zip`, Figure 3n, 3o utilizing rectified images provided in folder `Figure3n`, Figure 3q, 3r utilizing rectified images provided in folder `Figure3q` and Figure 4l, 4m utilizing rectified images provided in folder `Figure4l`.
+The First script `IAOS_Manual_Parameter_Estimation.py` generates results for Figure 3 and 4, specifically Figure 3k, 3l by utilizing rectified images provided in folder `Figure3k` within `IAOS_Data`, Figure 3n, 3o utilizing rectified images provided in folder `Figure3n`, Figure 3q, 3r utilizing rectified images provided in folder `Figure3q` and Figure 4l, 4m utilizing rectified images provided in folder `Figure4l`.
 
 The second script `IAOS_Automatic_Tracking.py` generates results for Figure 5, specifically Figure 5b,5c and 5e, 5f by utilizing rectified images provided in folder `Figure5_LinearMotion/images` and `Figure5_NonLinearMotion/images`. It automatically estimates the correct motion parameters of the target using variance as focussing metric as expalained within the article. It first generates integral images and radon filtered integral images using the estimated parameters and utizes the matlab script to track the target within them to generate Figures 5c anndd 5f. Similarly the matlab script also tries to track the target within the single images provided in folder `Figure5_LinearMotion/images` and `Figure5_NonLinearMotion/images` to generate Figures 5b and 5f.
 
@@ -31,8 +31,8 @@ Folder `Manual_Estimation` contains python script `IAOS_Manual_Estimation.py` co
 Linear motion parameters i.e angle and speed can be adjusted using GUI to perform IAOS. The resultant IAOS integral image is displayed within the GUI.
 
 
-## IAOS_Data.zip
-The zip packages contains the data of flights used to compute figures 3,4,5 and supplementary videos 1,2,3 of our article. 
+## IAOS_Data
+The folder contains the data of flights used to compute figures 3,4,5 and supplementary videos 1,2,3 of our article. 
 
 
 # System Requirements
@@ -58,10 +58,10 @@ The following software is required:
 
 # Demo
 ## Evaluation Script for Generating Figures 3k, 3l, 3n, 3o, 3q, 3r, 4l,4m 
-Simply open folder `Paper_Results` within unzipped `IAOS_Code` folder and execute the python script `IAOS_Manual_Parameter_Estimation.py`.
+Simply open folder `Paper_Results` within `IAOS_Code` folder and execute the python script `IAOS_Manual_Parameter_Estimation.py`.
 
 ## Evaluation Script for Generating Figures 5b, 5c, 5e, 5f 
-Simply open folder `Paper_Results` within unzipped `IAOS_Code` folder and execute the python script `IAOS_Automatic_Tracking.py`. It would generate results within folders `Figure5_LinearMotion/results` and `Figure5_NonLinearMotion/results`. The generated videos  `integral_tracked_projected.mp4` and `single_tracked.mp4` are videos which are combined to generate Videos 2 and 3 of supplementary material. Last frames of each videos are used for generating Figures 5b, 5c, 5e, 5f.
+Simply open folder `Paper_Results` within `IAOS_Code` folder and execute the python script `IAOS_Automatic_Tracking.py`. It would generate results within folders `Figure5_LinearMotion/results` and `Figure5_NonLinearMotion/results`. The generated videos  `integral_tracked_projected.mp4` and `single_tracked.mp4` are videos which are combined to generate Videos 2 and 3 of supplementary material. Last frames of each videos are used for generating Figures 5b, 5c, 5e, 5f.
 
 
 ## Citation
